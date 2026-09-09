@@ -1,0 +1,6 @@
+[2026-09-09T11:20:47.108Z] [INIT] Deep Copilot debug log started. file=c:\Users\kukesteve\Desktop\阅读的文件\campusfix-starter\.deep-copilot\logs\session-2026-09-09T11-20-47-108Z.log
+[2026-09-09T11:20:47.109Z] [ACTIVATE] {"version":"0.43.1"}
+[2026-09-09T11:20:47.109Z] [PROVIDERS_LOADED] {"count":4,"ids":["anthropic","custom","deepseek","openai"]}
+[2026-09-09T11:20:47.110Z] [TERMINAL_MONITOR_STARTED] {}
+[2026-09-09T11:20:47.110Z] [STATUSBAR_REGISTERED] {"id":"deepseekAgent.statusBar"}
+[2026-09-09T11:20:47.116Z] [INLINE_COMPLETION_REGISTERED]
