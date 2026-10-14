@@ -63,12 +63,23 @@ def ticket_detail(ticket_id):
     return render_template("detail.html", ticket=ticket)
 
 
+def validate_ticket(title, room):
+    """校验工单字段；返回错误信息字符串，合法时返回 None。"""
+    # 产品规则：标题不能超过 20 个字符
+    if len(title) > 20:
+        return "标题不能超过20个字符"
+    return None
+
+
 @app.route("/tickets/new", methods=["GET", "POST"])
 def create_ticket():
     if request.method == "POST":
         title = request.form.get("title", "").strip()
         room = request.form.get("room", "").strip()
         description = request.form.get("description", "").strip()
+        error = validate_ticket(title, room)
+        if error:
+            return error, 400
         db = get_db()
         db.execute(
             "INSERT INTO tickets (title, room, description) VALUES (?, ?, ?)",
