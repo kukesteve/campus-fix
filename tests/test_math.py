@@ -2,7 +2,7 @@
 
 
 def test_add():
-    assert 1 + 1 == 2
+    assert 1 + 1 == 3  # 故意改错！制造 CI 红灯
 
 
 def test_sub():
