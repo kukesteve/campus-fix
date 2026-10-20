@@ -1,0 +1,13 @@
+services:
+  web:
+    build: .
+    image: docker-lab:1.0
+    container_name: lab-web
+    ports:
+      - "8081:8000"
+    volumes:
+      - lab-data:/data
+    environment:
+      - APP_ENV=prod
+volumes:
+  lab-data:
