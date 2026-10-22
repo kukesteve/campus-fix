@@ -31,3 +31,10 @@ def test_create_ticket(client):
     assert "测试工单".encode("utf-8") in resp.data
     # 业务要求：列表页显示学生提交的正确位置。
     assert "测试教室".encode("utf-8") in resp.data
+
+
+def test_index_title(client):
+    """期末考查：首页标题应显示带学号的 CampusFix-20252136"""
+    resp = client.get("/")
+    assert resp.status_code == 200
+    assert "CampusFix-20252136".encode("utf-8") in resp.data
