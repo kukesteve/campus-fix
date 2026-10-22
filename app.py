@@ -1,4 +1,4 @@
-"""CampusFix 校园报修工单系统 - Flask 入口"""
+"""CampusFix-20252136 校园报修工单系统 - Flask 入口"""
 import logging
 import os
 import sqlite3
@@ -12,6 +12,9 @@ INSTANCE_DIR = BASE_DIR / "instance"
 DATABASE = Path(os.environ.get("DATABASE_PATH", INSTANCE_DIR / "campusfix.db"))
 
 app = Flask(__name__)
+
+# 站点标题：期末上机考查要求带上本人学号
+SITE_TITLE = "CampusFix-20252136"
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "dev-only-secret")
 
 # 基本日志配置：输出到 stdout，格式含时间与级别
